@@ -157,7 +157,8 @@ def receive_message(message, recipient_id):
         recipient_username = bot.get_chat(recipient_id).username if bot.get_chat(recipient_id) else "Unknown"
 
         # Pass the correct user_id to the log function
-        log_user_message(user_id=user_id, message_text=f"Question from @{sender_username} \n Recieved @{recipient_username} \n Message: {user_message}")
+        log_user_message(user_id=user_id, message_text=f"Question from @{sender_username} \n Recieved @{recipient_username} \n Message: {user_message}",
+                         username=sender_username, sender_username=sender_username, recipient_username=recipient_username)
 
 
     else:
